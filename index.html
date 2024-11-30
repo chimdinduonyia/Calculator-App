@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h1>Calculator</h1>
+    <div class="calculator-wrapper">
+        <div class="calculator-screen">
+            <input type="text" value="0" id="activeDisplay" readonly>
+            <input type="text" value="0" id="evalDisplay" readonly>
+            <div class="clear-and-delete">
+                <button type="button" id="clear" onclick="clearDisplay()">Clear</button>
+                <button type="button" id="delete" onclick="deleteBack()"><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+        </div>
+        <div class="calculator-keys">
+            <button type="button" class="key number" id="seven" onclick="writeNumber('7')">7</button>
+            <button type="button" class="key number" id="eight" onclick="writeNumber('8')">8</button>
+            <button type="button" class="key number" id="nine" onclick="writeNumber('9')">9</button>
+            <button type="button" class="key number" id="four" onclick="writeNumber('4')">4</button>
+            <button type="button" class="key number" id="five" onclick="writeNumber('5')">5</button>
+            <button type="button" class="key number" id="six" onclick="writeNumber('6')">6</button>
+            <button type="button" class="key number" id="one" onclick="writeNumber('1')">1</button>
+            <button type="button" class="key number" id="two" onclick="writeNumber('2')">2</button>
+            <button type="button" class="key number" id="three" onclick="writeNumber('3')">3</button>
+            <button type="button" class="key number" id="zero" onclick="writeNumber('0')">0</button>
+            <button type="button" class="key controls" id="point" onclick="writeDecimal('.')">.</button>
+            <button type="button" class="key" id="equals" onclick="logEqualsTo()">=</button>
+            <button type="button" class="key arithmetic" id="plus" onclick="writeSign('+')">+</button>
+            <button type="button" class="key arithmetic" id="minus" onclick="writeSign('-')">-</button>
+            <button type="button" class="key arithmetic" id="times" onclick="writeSign('×')">&times;</button>
+            <button type="button" class="key arithmetic" id="divide" onclick="writeSign('÷')">&divide;</button>
+            <button type="button" class="key controls" id="plus-minus">+ / -</button>
+            <button type="button" class="key controls" id="parentheses" onclick="writeParentheses()">( )</button>
+            <button type="button" class="key controls" id="percent" onclick="writeSign('%')">%</button>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/08864d9fb2.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

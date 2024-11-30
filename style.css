@@ -1,0 +1,253 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+}
+
+h1{
+    font-family: 'Outfit','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: #b72e13;
+    margin-top: 0px;
+}
+
+button{
+    font-family: 'Outfit', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+.calculator-wrapper{
+    width: 280px;
+    padding: 25px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+    background-color: rgb(24, 24, 24);
+    box-shadow: 0px 32px 64px -20px #4b0d0d;
+}
+
+.calculator-screen{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    /* gap: 30px; */
+}
+
+.calculator-screen input{
+    font-family: 'Outfit', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.calculator-screen input:nth-child(1){
+    font-size: 40px;
+    height: 50px;
+    color: #fff;
+    padding-bottom: 0;
+}
+
+.calculator-screen input:nth-child(2){
+    font-size: 20px;
+    color: #686868;
+}
+
+.calculator-keys{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 60px);
+
+    grid-template-areas: 
+        "plus-minus parentheses percent divide"
+        "seven eight nine times-key"
+        "four five six minus"
+        "one two three plus"
+        "zero-key point equals equals";
+}
+
+.key{
+    border: none;
+    border-radius: 7px;
+    font-family: "Outfit",'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0px 16px 30px -17px #000;
+}
+
+.key:hover{
+    cursor: pointer;
+}
+
+.clear-and-delete{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #7a7a7a33;
+}
+
+.clear-and-delete button{
+    font-family: "Outfit",'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.number{
+    color: #fff;
+    background-color: hsl(0, 0%, 11%);
+    transition: all 0.3s ease;
+}
+
+.number:hover{
+    background-color: hsl(0, 0%, 20%);
+}
+
+.number:active{
+    background-color: hsl(0, 0%, 35%);
+}
+
+.arithmetic{
+    color: #fff;
+    background-color: hsl(9, 93%, 20%);
+    /* background-color: hsl(246, 71%, 50%); */
+    transition: all 0.3s ease;
+}
+
+.arithmetic:hover{
+    background-color: hsl(9, 93%, 30%);
+}
+
+.arithmetic:active{
+    background-color: hsl(9, 93%, 40%);
+}
+
+.controls{
+    background-color: hsl(0, 0%, 15%);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.controls:hover{
+    background-color: hsl(0, 0%, 20%);
+}
+
+.controls:active{
+    background-color: hsl(0, 0%, 55%);
+}
+
+#clear{
+    border: none;
+    border-radius: 30px;
+    padding: 5px 15px;
+    background-color: hsl(10, 81%, 40%);
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+#clear:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+#delete{
+    padding: 0;
+    padding-right: 10px;
+    border: none;
+    background-color: transparent;
+    color: #b72e13;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+
+#delete:hover{
+    color: #fff;
+}
+
+#seven{
+    grid-area: seven;
+}
+
+#eight{
+    grid-area: eight;
+}
+
+#nine{
+    grid-area: nine;
+}
+
+#four{
+    grid-area: four;
+}
+
+#five{
+    grid-area: five;
+}
+
+#six{
+    grid-area: six;
+}
+
+#one{
+    grid-area: one;
+}
+
+#two{
+    grid-area: two;
+}
+
+#three{
+    grid-area: three;
+}
+
+#zero{
+    grid-area: zero-key;
+}
+
+#point{
+    grid-area: point;
+    
+}
+
+#equals{
+    grid-area: equals;
+    background-color: hsl(10, 81%, 30%);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#equals:hover{
+    background-color: hsl(10, 81%, 40%);
+}
+
+#plus{
+    grid-area: plus;
+}
+
+#minus{
+    grid-area: minus;
+}
+
+#times{
+    grid-area: times-key;
+}
+
+#divide{
+    grid-area: divide;
+}
+
+#plus-minus{
+    grid-area: plus-minus;
+}
+
+#parentheses{
+    grid-area: parentheses;
+}
+
+#percent{
+    grid-area: percent;
+}
